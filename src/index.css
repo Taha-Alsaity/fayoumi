@@ -1,0 +1,67 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap');
+
+:root {
+  --primary-color: #1a5e3a; /* أخضر داكن */
+  --secondary-color: #f7a01d; /* أصفر ذهبي/برتقالي لـ CTA */
+  --text-color: #333;
+  --bg-light: #f4f7f6;
+  --bg-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  color: var(--text-color);
+  direction: rtl; /* دعم اللغة العربية */
+  text-align: right; 
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.section {
+  padding: 60px 5%; /* تباعد قياسي للأقسام */
+  overflow: hidden;
+}
+
+/* الأزرار الرئيسية */
+.cta-button {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--bg-white);
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #e58f0d;
+}
+
+/* التجاوب العام */
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 4%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}

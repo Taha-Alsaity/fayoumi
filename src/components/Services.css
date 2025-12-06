@@ -1,0 +1,238 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --primary: #2a4365;
+    --primary-light: #3c5c85;
+    --primary-dark: #1a2d45;
+    --accent: #e53e3e;
+    --text: #2d3748;
+    --text-light: #718096;
+    --background: #f7fafc;
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition: 0.3s linear;
+    --font-primary: 'Inter', sans-serif;
+}
+
+
+
+.service-container {
+    padding: 2rem;
+}
+
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-inline: auto;
+    font-size: 1.1rem;
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    padding-top: 50px;
+    
+    
+}
+
+
+.service-card {
+     background-color: #d2ac66;
+    border-radius: 30px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border: 1px solid rgba(28, 8, 114, 0.718);
+    box-shadow: var(--card-shadow);
+    position: relative;
+    transition: transform var(--transition), box-shadow var(--transition);
+    cursor: pointer;
+ 
+   
+    
+}
+.service-card .service-icon {
+    width: 90%;
+    
+   
+}
+.service-icon img{
+    width: 100%;
+    height: 85%;
+    border-radius: 10px;
+    
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+   
+   
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    margin: 1.5rem auto;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition), background var(--transition);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    background: var(--accent);
+}
+
+
+.service-title {
+    text-align: center;
+    font-weight: 600;
+    color: #ffff;
+    padding-top: 0px;
+    font-size: 1.3em;
+    background-color: #212053; 
+    margin-left: 15px;margin-right: 15px;
+    border:  1px solid grey;
+    box-shadow: 1px 2px black;
+}
+
+.service-card:hover .service-title { color: var(--accent); }
+
+.service-brief {
+    text-align: center;
+    color: var(--text-light);
+    padding: 0 1.5rem;
+    margin-bottom: 50px;
+    line-height: 1.5;
+    
+}
+
+
+.service-details {
+    position: absolute;
+    inset: 0;
+    padding: 1.5rem;
+    display: flex;
+    background: #212053;
+    opacity: 0;
+    color: #ffff;
+    transform: translateY(100%);
+    align-items: center;
+    transition: var(--transition);
+    font-size: 1.2em;
+}
+
+.service-card:hover .service-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+.service-card:hover .service-title{
+    color: #d2ac66;
+}
+
+.detail-item {
+    display: flex;
+    margin-bottom: .75rem;
+    align-items: flex-start;
+}
+
+.detail-icon {
+    color: var(--accent);
+    margin-right: .75rem;
+    font-weight: bold;
+}
+
+
+.cta-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: .75rem 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    align-self: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+}
+
+.cta-button:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    margin-left: .5rem;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.4);
+    border-top-color: white;
+    animation: spin 1s infinite;
+    display: none;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(229,62,62,.4); }
+    70% { box-shadow: 0 0 0 10px rgba(229,62,62,0); }
+    100% { box-shadow: 0 0 0 0 rgba(229,62,62,0); }
+}
+@media (max-width:781px){
+    .service-card {
+
+    max-width: 330px;
+    
+    
+}
+.services-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+}

@@ -1,0 +1,204 @@
+
+.modern-about {
+  background: #ffff;
+ 
+  padding-top: 140px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  direction: rtl;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+.modern-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+
+.modern-text {
+  flex: 1 1 320px;
+  min-width: 20px;
+  text-align: right;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideIn 1s forwards;
+}
+
+.modern-text h2 {
+  font-size: 2.8rem;
+  color: #212053;
+  margin-bottom: 20px;
+}
+
+.modern-text p {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 0px;
+}
+
+
+.modern-image {
+  flex: 1 1 320px;
+  min-width: 20px;
+  text-align: center;
+  opacity: 0;
+  max-width: 500px;
+  transform: translateX(-50px);
+  animation: slideIn 1s forwards 0.3s;
+}
+
+.modern-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+
+.modern-image img:hover {
+  transform: scale(1.05);
+}
+
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px 35px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 70px;
+  min-width: 200px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+#vesion .modern-text ,#policy .modern-text {
+  text-align: center;
+  
+  
+
+}
+
+#vesion .modern-container ,#policy .modern-container {
+  width: 60%;
+  
+
+}
+#vesion .modern-text{
+  padding-bottom: 100px;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  font-size: 1.7rem;
+  color: #d2ac66;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  color: #475569;
+}
+.stat-card  span{
+  font-size: 0.6em;
+}
+
+
+@media (max-width: 992px) {
+  .modern-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modern-text,
+  .modern-image {
+    transform: none;
+    opacity: 1;
+    animation: none;
+  }
+
+  .modern-text {
+    text-align: center;
+  }
+
+  .modern-image img {
+    max-width: 90%;
+  }
+
+  .stats-container {
+    gap: 20px;
+  }
+
+  .stat-card {
+    padding: 20px;
+    min-width: 140px;
+    width: 50%;
+  }
+
+  .stat-card h3 {
+    font-size: 2rem;
+  }
+
+  .stat-card p {
+    font-size: 0.95rem;
+  }
+
+
+}
+
+@media (max-width: 450px) {
+
+    .stat-card {
+    padding: 20px;
+    min-width: 140px;
+    width: 85%;
+  }
+ 
+  
+
+    .modern-text  p{
+    
+    font-size: 0.9em;
+  }
+      .modern-text  h2{
+    
+    font-size: 2em;
+  }
+  .modern-about {
+  
+  
+  
+  padding-left: 2px;
+  padding-right: 2px;
+
+}
+}

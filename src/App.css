@@ -1,0 +1,16 @@
+* {
+  font-family: "MyFont", sans-serif !important;
+}
+
+body {
+    font-family: "MyFont", sans-serif !important;
+  margin: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+
+
+.contact {
+  text-align: center;
+}
