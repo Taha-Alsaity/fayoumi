@@ -5,11 +5,11 @@ import About from './components/About';
 import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import OtherAbout from './components/otherAbout';
-import Services from './components/Services';
+import Other2 from './components/Other2';
 import ScrollToHash from './components/ScrollToHash';
 import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
+
 const App = () => {
   const items = [
     {
@@ -67,7 +67,7 @@ const App = () => {
           <>
           <Hero/>
           <About />
-          <OtherAbout/>
+          <Other2/>
           
       </>
       

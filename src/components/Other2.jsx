@@ -2,7 +2,7 @@
 import './About.css';
 
 
-const OtherAbout = () => {
+const Other2 = () => {
 
 
   return (
@@ -50,4 +50,4 @@ const OtherAbout = () => {
   
 
 
-export default OtherAbout;
+export default Other2;
