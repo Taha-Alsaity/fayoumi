@@ -63,7 +63,7 @@ const Contact = () => {
 {status && <p className="status-message">{status}</p>}
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/218910000000" 
+        href="https://wa.me/218924437520" 
         className="whatsapp-btn"
         target="_blank"
         rel="noopener noreferrer"
